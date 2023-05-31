@@ -4,7 +4,7 @@ import { createPopper } from '@popperjs/core';
 @Component({
   selector: 'app-popper-js',
   templateUrl: './popper-js.component.html',
-  styleUrls: ['./popper-js.component.css']
+  styleUrls: ['./popper-js.component.css'],
 })
 export class PopperJsComponent {
   private popperInstance: any;
@@ -22,17 +22,17 @@ export class PopperJsComponent {
           options: {
             offset: [0, 8],
           },
-        }
+        },
       ],
     });
   }
 
-  destroy() {
-    if (this.popperInstance) {
-      this.popperInstance.destroy();
-      this.popperInstance = null;
-    }
-  }
+  // destroy() {
+  //   if (this.popperInstance) {
+  //     this.popperInstance.destroy();
+  //     this.popperInstance = null;
+  //   }
+  // }
 
   show() {
     const tooltip = this.elementRef.nativeElement.querySelector('#tooltip');
